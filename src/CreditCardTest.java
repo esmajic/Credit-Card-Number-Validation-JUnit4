@@ -47,4 +47,9 @@ public class CreditCardTest {
 		int result = validation.getDigit(8);
 		assertEquals(8, result);
 	}
+	@Test
+	public void testSumOfDoubleEvenPlace() {
+		int result = validation.sumOfDoubleEvenPlace(5196081888500645L);
+		assertEquals(28, result);
+	}
 }
