@@ -14,7 +14,7 @@ public class CreditCardTest {
 
 	@Test
 	public void testIsValid() {
-		long number = validation.isValid(5196081888500645L);
+		boolean condition = validation.isValid(5196081888500645L);
 		assertTrue(true);
 	}
 	
@@ -32,7 +32,13 @@ public class CreditCardTest {
 	
 	@Test
 	public void testPrefixMatched() {
-		int result = validation.prefixMatched(5196081888500645L, 16);
+		boolean condition = validation.prefixMatched(5196081888500645L, 16);
 		assertTrue(true);
+	}
+	
+	@Test
+	public void testSumOfOddPlace() {
+		int result = validation.sumOfOddPlace(5196081888500645L);
+		assertEquals(16, result);
 	}
 }
