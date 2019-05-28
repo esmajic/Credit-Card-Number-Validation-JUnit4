@@ -10,4 +10,10 @@ public class CreditCard {
 		return sum;
 	}
 
+	public static int getDigit(int number) {
+		if (number < 9)
+			return number;
+		return number / 10 + number % 10;
+	}
+
 }
