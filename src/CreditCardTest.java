@@ -13,10 +13,14 @@ public class CreditCardTest {
 	}
 
 	@Test
-	public void shouldBeGreenIfCreditCardNumberIsValid() {
+	public void testIsValid() {
 		long number = validation.isValid(5196081888500645L);
 		assertTrue(true);
 	}
 	
-
+	@Test
+	public void testGetPrefix() {
+		long result = validation.getPrefix(5196081888500645L, 0);
+		assertEquals(5196081888500645L, result);;
+	}
 }
