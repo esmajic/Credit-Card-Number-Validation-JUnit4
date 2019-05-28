@@ -23,4 +23,10 @@ public class CreditCardTest {
 		long result = validation.getPrefix(5196081888500645L, 0);
 		assertEquals(5196081888500645L, result);;
 	}
+	
+	@Test
+	public void testGetSize() {
+		int result = validation.getSize(5196081888500645L);
+		assertEquals(16, result);
+	}
 }
