@@ -7,7 +7,6 @@ public class CreditCard {
 		for (int i = getSize(number) - 2; i >= 0; i -= 2) {
 			sum += getDigit(Integer.parseInt(num.charAt(i) + "") * 2);
 		}
-
 		return sum;
 	}
 
@@ -26,6 +25,10 @@ public class CreditCard {
 			sum += Integer.parseInt(num.charAt(i) + "");
 		}
 		return sum;
-
 	}
+
+	public static boolean prefixMatched(long number, int d) {
+		return getPrefix(number, getSize(d)) == d;
+	}
+
 }
