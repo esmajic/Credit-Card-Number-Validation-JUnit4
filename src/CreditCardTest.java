@@ -1,6 +1,4 @@
 import static org.junit.Assert.*;
-
-import org.junit.Before;
 import org.junit.Test;
 
 public class CreditCardTest {
@@ -15,7 +13,7 @@ public class CreditCardTest {
 	
 	@Test
 	public void testGetPrefix() {
-		long result = CreditCard.getPrefix(5196081888500645L, 0);
+		long result = CreditCard.getPrefix(5196081888500645L, 16);
 		assertEquals(5196081888500645L, result);;
 	}
 	
@@ -28,13 +26,13 @@ public class CreditCardTest {
 	@Test
 	public void testPrefixMatched() {
 		boolean condition = CreditCard.prefixMatched(5196081888500645L, 16);
-		assertTrue(condition);
+		assertFalse(condition);
 	}
 	
 	@Test
 	public void testSumOfOddPlace() {
 		int result = CreditCard.sumOfOddPlace(5196081888500645L);
-		assertEquals(16, result);
+		assertEquals(42, result);
 	}
 	
 	@Test
