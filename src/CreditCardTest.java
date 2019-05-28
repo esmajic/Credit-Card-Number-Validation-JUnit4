@@ -41,4 +41,10 @@ public class CreditCardTest {
 		int result = validation.sumOfOddPlace(5196081888500645L);
 		assertEquals(16, result);
 	}
+	
+	@Test
+	public void testGetDigit() {
+		int result = validation.getDigit(8);
+		assertEquals(8, result);
+	}
 }
