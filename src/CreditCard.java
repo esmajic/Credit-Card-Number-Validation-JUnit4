@@ -35,4 +35,12 @@ public class CreditCard {
 		String num = d + "";
 		return num.length();
 	}
+
+	public static long getPrefix(long number, int k) {
+		if (getSize(number) > k) {
+			String num = number + "";
+			return Long.parseLong(num.substring(0, k));
+		}
+		return number;
+	}
 }
