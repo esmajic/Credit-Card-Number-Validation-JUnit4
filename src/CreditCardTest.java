@@ -17,5 +17,6 @@ public class CreditCardTest {
 		long number = validation.isValid(5196081888500645L);
 		assertTrue(true);
 	}
+	
 
 }
