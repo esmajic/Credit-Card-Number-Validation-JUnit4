@@ -29,4 +29,10 @@ public class CreditCardTest {
 		int result = validation.getSize(5196081888500645L);
 		assertEquals(16, result);
 	}
+	
+	@Test
+	public void testPrefixMatched() {
+		int result = validation.prefixMatched(5196081888500645L, 16);
+		assertTrue(true);
+	}
 }
