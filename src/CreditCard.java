@@ -31,4 +31,8 @@ public class CreditCard {
 		return getPrefix(number, getSize(d)) == d;
 	}
 
+	public static int getSize(long d) {
+		String num = d + "";
+		return num.length();
+	}
 }
