@@ -43,4 +43,11 @@ public class CreditCard {
 		}
 		return number;
 	}
+
+	public static boolean isValid(long number) {
+		return (getSize(number) >= 13 && getSize(number) <= 16)
+				&& (prefixMatched(number, 4) || prefixMatched(number, 5) || prefixMatched(number, 37)
+						|| prefixMatched(number, 6))
+				&& ((sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0);
+	}
 }
